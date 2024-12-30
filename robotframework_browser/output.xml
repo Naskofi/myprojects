@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.9 on win32)" generated="2024-12-08T22:40:28.130576" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Nas\PycharmProjects\robotframework_browser\login.robot">
+<test id="s1-t1" name="New user should be able to create account" line="6">
+<kw name="Navigate to create account page">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-12-08T22:40:28.885836" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Nas\\PycharmProjects\\robotframework_browser\\browser\\traces\\temp\\41f212f0-861d-4f3e-a126-536bbca4cd05"}</msg>
+<msg time="2024-12-08T22:40:28.949664" level="INFO">Starting Browser process C:\Users\Nas\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js using port 51652</msg>
+<msg time="2024-12-08T22:40:28.949664" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Nas\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Browser\\wrapper\\index.js', '51652']</msg>
+<msg time="2024-12-08T22:40:30.899728" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Nas\\PycharmProjects\\robotframework_browser\\browser\\traces\\temp\\41f212f0-861d-4f3e-a126-536bbca4cd05"}</msg>
+<arg>Chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-12-08T22:40:28.884840" elapsed="2.014888"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-12-08T22:40:36.017524" level="INFO">Successfully initialized new page object and opened url: https://magento.softwaretestingboard.com/customer/account/create/</msg>
+<msg time="2024-12-08T22:40:36.017524" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://magento.softwaretestingboard.com/customer/account/create/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-12-08T22:40:30.899728" elapsed="5.117796"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-12-08T22:40:36.019519" level="INFO">Clicks the element 'xpath=//button[@aria-label='Consent']'.</msg>
+<arg>xpath=//button[@aria-label='Consent']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.018520" elapsed="0.326944"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:28.883843" elapsed="7.462619"/>
+</kw>
+<kw name=" Enter user first and last names">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2024-12-08T22:40:36.348457" level="INFO">${firstname} = Jessica</msg>
+<var>${firstname}</var>
+<status status="PASS" start="2024-12-08T22:40:36.347459" elapsed="0.000998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.349454" level="INFO">Jessica</msg>
+<arg>${firstname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.349454" elapsed="0.000996"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.351447" level="INFO">${firstname} = Jessica</msg>
+<arg>${firstname}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.350450" elapsed="0.000997"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-08T22:40:36.353443" level="INFO">Fills the text 'Jessica' in the given field.</msg>
+<arg>id=firstname</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.352445" elapsed="0.050865"/>
+</kw>
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2024-12-08T22:40:36.405305" level="INFO">${lastname} = Quinn</msg>
+<var>${lastname}</var>
+<status status="PASS" start="2024-12-08T22:40:36.403310" elapsed="0.001995"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.406303" level="INFO">Quinn</msg>
+<arg>${lastname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.406303" elapsed="0.000998"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.408296" level="INFO">${lastname} = Quinn</msg>
+<arg>${lastname}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.407301" elapsed="0.000995"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-08T22:40:36.409293" level="INFO">Fills the text 'Quinn' in the given field.</msg>
+<arg>id=lastname</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.408296" elapsed="0.050865"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:36.346462" elapsed="0.113697"/>
+</kw>
+<kw name=" Enter user email">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-12-08T22:40:36.478110" level="INFO">${email} = vaughnamber@example.net</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-12-08T22:40:36.477112" elapsed="0.001995"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.479107" level="INFO">vaughnamber@example.net</msg>
+<arg>${email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.479107" elapsed="0.000998"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.481101" level="INFO">${email} = vaughnamber@example.net</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.480105" elapsed="0.000996"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-08T22:40:36.483096" level="INFO">Fills the text 'vaughnamber@example.net' in the given field.</msg>
+<arg>id=email_address</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.482098" elapsed="0.049395"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:36.476118" elapsed="0.056369"/>
+</kw>
+<kw name=" Enter user password and confirm password">
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-12-08T22:40:36.547448" level="INFO">${password} = #I9F1XywwK</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.546451" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.548445" level="INFO">#I9F1XywwK</msg>
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.547448" elapsed="0.000997"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-08T22:40:36.549443" level="INFO">${password} = #I9F1XywwK</msg>
+<arg>${password}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.549443" elapsed="0.000997"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-08T22:40:36.552435" level="INFO">Fills the text '#I9F1XywwK' in the given field.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.550440" elapsed="0.063346"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-12-08T22:40:36.616777" level="INFO">Fills the text '#I9F1XywwK' in the given field.</msg>
+<arg>id=password-confirmation</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.614784" elapsed="0.090757"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:36.545453" elapsed="0.160088"/>
+</kw>
+<kw name="Click create account and assert that account was created successfully">
+<kw name="Click" owner="Browser">
+<msg time="2024-12-08T22:40:36.750419" level="INFO">Clicks the element 'xpath=//button[@title='Create an Account']'.</msg>
+<arg>xpath=//button[@title='Create an Account']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:36.749422" elapsed="2.746704"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-12-08T22:40:41.196900" level="INFO">Text: 'Thank you for registering with Main Website Store.'</msg>
+<arg>xpath=//div[@class='message-success success message']</arg>
+<arg>*=</arg>
+<arg>Thank you for registering with Main Website Store.</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-12-08T22:40:39.496126" elapsed="1.700774"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:36.747440" elapsed="4.449460"/>
+</kw>
+<status status="PASS" start="2024-12-08T22:40:28.881846" elapsed="12.315054"/>
+</test>
+<status status="PASS" start="2024-12-08T22:40:28.132571" elapsed="13.464573"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
