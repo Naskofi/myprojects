@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.9 on win32)" generated="2024-12-06T20:43:47.052185" rpa="false" schemaversion="5">
+<suite id="s1" name="CreateAccount" source="C:\Users\Nas\PycharmProjects\Myrobotframework\CreateAccount.robot">
+<kw name="Navigate to homepage and maximize browser" owner="CreateAccount" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-06T20:43:48.039150" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-06T20:43:48.037645" elapsed="21.133171"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-06T20:44:09.171812" elapsed="0.047633"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-06T20:44:09.223258" level="INFO">Clicking element 'xpath://button[@aria-label='Consent']'.</msg>
+<arg>${CONSENT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-06T20:44:09.220262" elapsed="0.433566"/>
+</kw>
+<status status="PASS" start="2024-12-06T20:43:48.033943" elapsed="21.620883"/>
+</kw>
+<test id="s1-t1" name="Verify that account creation successful with all field information" line="23">
+<status status="FAIL" start="2024-12-06T20:44:09.654826" elapsed="0.001718">Test cannot be empty.</status>
+</test>
+<status status="FAIL" start="2024-12-06T20:43:47.059532" elapsed="22.598009"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CreateAccount">CreateAccount</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-06T20:43:47.030625" level="WARN">Error in file 'C:\Users\Nas\PycharmProjects\Myrobotframework\CreateAccount.robot' on line 30: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

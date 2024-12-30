@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.9 on win32)" generated="2024-12-15T21:25:31.726838" rpa="false" schemaversion="5">
+<suite id="s1" name="CreateAccount" source="C:\Users\Nas\PycharmProjects\Myrobotframework\CreateAccount.robot">
+<kw name="Navigate to homepage and maximize browser" owner="CreateAccount" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:32.397278" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-15T21:25:32.397278" elapsed="7.586945"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-15T21:25:39.985219" elapsed="0.141229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:40.129751" level="INFO">Clicking element 'xpath://button[@class=' css-1n36tvh']'.</msg>
+<arg>${CONSENT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:40.127741" elapsed="0.340807"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:32.397278" elapsed="8.072268"/>
+</kw>
+<test id="s1-t1" name="Verify the account creation on the homepage" line="10">
+<kw name="Navigate to create account page" owner="CreateAccount">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:40.474533" level="INFO">Clicking element 'xpath://div[@class='panel header']/ul//li[3]'.</msg>
+<arg>${CREATEACC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:40.474533" elapsed="1.182704"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-15T21:25:41.658135" elapsed="0.097105"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PAGE_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-15T21:25:41.756228" elapsed="0.118163"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:40.472539" elapsed="1.401852"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:40.470545" elapsed="1.404843"/>
+</test>
+<test id="s1-t2" name="Verify that all required information are entered and create account button clicked" line="15">
+<kw name="Enter all mandatory information and click create an account">
+<kw name="First Name" owner="FakerLibrary">
+<msg time="2024-12-15T21:25:41.879377" level="INFO">${firstname} = Patrick</msg>
+<var>${firstname}</var>
+<status status="PASS" start="2024-12-15T21:25:41.878403" elapsed="0.000974"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:41.879377" level="INFO">Typing text 'Patrick' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:41.879377" elapsed="0.160726"/>
+</kw>
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2024-12-15T21:25:42.045849" level="INFO">${lastname} = Salas</msg>
+<var>${lastname}</var>
+<status status="PASS" start="2024-12-15T21:25:42.040103" elapsed="0.006260"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:42.047661" level="INFO">Typing text 'Salas' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.046819" elapsed="0.130202"/>
+</kw>
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-12-15T21:25:42.177021" level="INFO">${email} = gillandrew@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-12-15T21:25:42.177021" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:42.177021" level="INFO">Typing text 'gillandrew@example.com' into text field 'id=email_address'.</msg>
+<arg>id=email_address</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.177021" elapsed="0.176693"/>
+</kw>
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-12-15T21:25:42.357314" level="INFO">${password} = CVcx5T+z^f</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.353714" elapsed="0.003600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:42.358311" level="INFO">Typing text 'CVcx5T+z^f' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.357314" elapsed="0.183814"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:42.542127" level="INFO">Typing text 'CVcx5T+z^f' into text field 'id=password-confirmation'.</msg>
+<arg>id=password-confirmation</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.541128" elapsed="0.135196"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:42.676324" level="INFO">Clicking element 'xpath://button[@class='action submit primary']'.</msg>
+<arg>${CREATEACC_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:42.676324" elapsed="2.901170"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ACC_CREATION_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-15T21:25:45.578492" elapsed="0.309688"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:41.877385" elapsed="4.010795"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:41.876385" elapsed="4.011795"/>
+</test>
+<test id="s1-t3" name="Verify the account is successfully created" line="20">
+<kw name="Assert that the account is successfully created" owner="CreateAccount">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGGEDINUSER_DROPDOWN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-15T21:25:45.888180" elapsed="0.031235"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:45.919415" level="INFO">Clicking element 'xpath://button[@data-action='customer-menu-toggle']'.</msg>
+<arg>${LOGGEDINUSER_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:45.919415" elapsed="0.072720"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SIGNOUT_LINK}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-15T21:25:45.992135" elapsed="0.046866"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-15T21:25:46.039001" level="INFO">Clicking element 'xpath://div[@class='customer-menu']/ul//li[3]'.</msg>
+<arg>${SIGNOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-15T21:25:46.039001" elapsed="1.829928"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:45.888180" elapsed="1.980749"/>
+</kw>
+<status status="PASS" start="2024-12-15T21:25:45.888180" elapsed="1.980749"/>
+</test>
+<status status="PASS" start="2024-12-15T21:25:31.726838" elapsed="16.143084"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="CreateAccount">CreateAccount</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
